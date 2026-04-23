@@ -33,7 +33,7 @@ function Header() {
     <>
       <header className={scrolled ? 'scrolled' : ''}>
         <div className="brand">
-          <img src="/images/motion.jpeg" alt="Motion Auto Garage Ltd" className="logo" />
+          <img src="/images/motion.png" alt="Motion Auto Garage Ltd" className="logo" />
           <strong>MOTION AUTO GARAGE LTD.</strong>
         </div>
         <button
