@@ -17,6 +17,8 @@ body {
   color: #111;
   background-attachment: scroll;
   background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 @media (prefers-color-scheme: dark) {
