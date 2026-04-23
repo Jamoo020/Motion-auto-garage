@@ -15,7 +15,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: #111;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
 }
 
