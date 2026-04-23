@@ -13,27 +13,31 @@ header {
   position: relative;
 }
 
-.brand {
+.brand-area {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  flex: 0 1 auto;
   min-width: 0;
-  max-width: 640px;
   margin: 0 auto;
 }
 
-.brand strong {
+.brand-text {
   font-size: 1rem;
   line-height: 1.1;
   color: #0f172a;
   letter-spacing: 1.8px;
   text-transform: uppercase;
   white-space: nowrap;
+  text-align: center;
+  width: 100%;
 }
 
 .logo {
+  position: absolute;
+  left: 0;
   height: 60px;
   width: auto;
   object-fit: contain;

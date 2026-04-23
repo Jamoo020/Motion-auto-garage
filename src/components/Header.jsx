@@ -32,9 +32,9 @@ function Header() {
   return (
     <>
       <header className={scrolled ? 'scrolled' : ''}>
-        <div className="brand">
+        <div className="brand-area">
           <img src="/images/motion.png" alt="Motion Auto Garage Ltd" className="logo" />
-          <strong>MOTION AUTO GARAGE LTD.</strong>
+          <strong className="brand-text">MOTION AUTO GARAGE LTD.</strong>
         </div>
         <button
           type="button"
