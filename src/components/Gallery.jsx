@@ -29,7 +29,7 @@ function Gallery() {
               alt={`Job ${index + 1}`}
               loading="lazy"
               onLoad={() => handleImageLoad(index)}
-              style={{ display: loadedImages.has(index) ? 'block' : 'none' }}
+              style={{ opacity: loadedImages.has(index) ? 1 : 0 }}
             />
           </div>
         ))}
