@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="container">
       <div className="hero-section">
-        <h1 className="hero-title">Welcome to Motion Autogarage</h1>
+        <h1 className="hero-title">Welcome to Motion Auto Garage</h1>
         <h2 className="hero-subtitle">Expert Car Repair Services</h2>
         <p className="hero-description">
           Our expertise spans professional car bodywork, high-quality paint application, and complete vehicle restoration.
@@ -37,15 +37,15 @@ function Home() {
         <h2 className="section-title">Car Maintenance Tips</h2>
         <div className="tips-content">
           <div className="tip-item">
-            <h3>🛢️ Regular Oil Changes</h3>
+            <h3>Regular Oil Changes</h3>
             <p>Change your engine oil every 3,000-5,000 miles (or as recommended by your vehicle's manufacturer). Fresh oil keeps your engine lubricated, prevents wear, and maintains optimal performance and fuel efficiency.</p>
           </div>
           <div className="tip-item">
-            <h3>🛞 Tire Maintenance</h3>
+            <h3>Tire Maintenance</h3>
             <p>Check tire pressure monthly and rotate tires every 5,000-7,000 miles. Proper tire maintenance extends tire life, improves fuel economy, ensures safe handling, and reduces the risk of blowouts.</p>
           </div>
           <div className="tip-item">
-            <h3>🛑 Brake System Care</h3>
+            <h3>Brake System Care</h3>
             <p>Have your brakes inspected regularly and replace brake pads before they wear completely. A well-maintained brake system ensures your safety and prevents expensive damage to rotors and other brake components.</p>
           </div>
         </div>

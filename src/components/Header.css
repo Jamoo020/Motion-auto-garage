@@ -2,101 +2,99 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 28px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
+  padding: 18px 32px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   position: sticky;
   top: 0;
   z-index: 20;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.12);
   flex-wrap: wrap;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex: 1 1 320px;
+  gap: 14px;
+  flex: 1 1 280px;
   min-width: 0;
 }
 
 .brand strong {
-  font-size: 1.6rem;
-  letter-spacing: 1.2px;
-  color: #0b2545;
+  font-size: 1rem;
   line-height: 1.1;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  color: #0f172a;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .logo {
-  height: 70px;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  object-position: left center;
 }
 
 @media (min-width: 900px) {
   .logo {
-    height: 100px;
-    width: auto;
+    height: 72px;
+  }
+}
 
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
 }
 
 nav a {
   margin: 0;
-  color: #314151;
+  color: #334155;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   transition: color 0.2s, background 0.2s, transform 0.2s;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 999px;
+  font-size: 0.95rem;
 }
 
-nav a:hover {
-  color: #152f4c;
-  background: rgba(60, 157, 255, 0.12);
-  transform: translateY(-1px);
-}
-
+nav a:hover,
 nav a.active {
-  color: #152f4c;
-  background: rgba(60, 157, 255, 0.18);
+  color: #0f172a;
+  background: rgba(59, 130, 246, 0.12);
+  transform: translateY(-1px);
 }
 
 .menu-toggle {
   display: none;
-  border: 1px solid rgba(60, 157, 255, 0.24);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   background: rgba(255, 255, 255, 0.96);
-  color: var(--accent);
+  color: #2563eb;
   padding: 10px 14px;
   border-radius: 999px;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   transition: background 0.2s, transform 0.2s;
 }
 
 .menu-toggle:hover {
-  background: rgba(60, 157, 255, 0.14);
+  background: rgba(59, 130, 246, 0.14);
   transform: translateY(-1px);
 }
 
 header.scrolled {
-  padding: 10px 18px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
 }
 
 header.scrolled .logo {
-  height: 60px;
+  height: 52px;
 }
 
 header.scrolled .brand strong {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
 }
 
 .drawer-backdrop {
@@ -124,13 +122,13 @@ header.scrolled .brand strong {
   }
 
   .brand {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 
   .brand strong {
-    font-size: 1.3rem;
+    font-size: 0.95rem;
   }
 
   nav {
@@ -163,13 +161,14 @@ header.scrolled .brand strong {
     pointer-events: auto;
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
+
   nav a {
     flex: 0 0 auto;
     margin: 0;
     padding: 14px 16px;
     text-align: left;
     color: #eef2ff;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 14px;
     transition: background 0.2s;
     position: relative;
@@ -178,8 +177,9 @@ header.scrolled .brand strong {
     touch-action: manipulation;
   }
 
-  nav a:hover {
-    background: rgba(255, 255, 255, 0.12);
+  nav a:hover,
+  nav a.active {
+    background: rgba(255, 255, 255, 0.16);
   }
 
   .menu-toggle {
@@ -190,8 +190,8 @@ header.scrolled .brand strong {
     min-width: 50px;
     min-height: 50px;
     background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(60, 157, 255, 0.16);
-    color: var(--accent);
+    border: 1px solid rgba(59, 130, 246, 0.16);
+    color: #2563eb;
     margin-left: auto;
   }
 
