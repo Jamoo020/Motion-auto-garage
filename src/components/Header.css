@@ -171,6 +171,10 @@ header.scrolled .brand strong {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 14px;
     transition: background 0.2s;
+    position: relative;
+    z-index: 22;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   nav a:hover {
@@ -202,7 +206,7 @@ header.scrolled .brand strong {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
-    z-index: 20;
+    z-index: 19;
   }
 
   .drawer-backdrop.visible {
