@@ -31,6 +31,19 @@ function Services() {
           </li>
         </ul>
       </div>
+      <div className="body-container">
+        <h2>What We Do</h2>
+        <p>We undertake all types of work including:</p>
+        <ul className="service-list">
+          <li>Mechanical repairs</li>
+          <li>Auto electrical</li>
+          <li>Collision repairs</li>
+          <li>Body building</li>
+          <li>Panel beating</li>
+          <li>Fabrication</li>
+        </ul>
+        <p>For both heavy and light vehicles.</p>
+      </div>
       <div className="Mechanical-container">
         <h2>Mechanical Services</h2>
         <p>At Motion Auto Garage Ltd, we provide a comprehensive range of mechanical services to keep your vehicle running smoothly. <br />Our certified technicians use the latest diagnostic equipment and techniques to ensure your car receives the best care possible:</p>

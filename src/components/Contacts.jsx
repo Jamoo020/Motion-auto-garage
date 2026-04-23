@@ -40,7 +40,7 @@ function Contacts() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'info@automotion.co.ke',
+to_email: 'info@motion-auto.co.ke',
         form_type: formData.enableBooking ? 'Appointment Request' : 'Contact Message',
         phone: formData.phone || 'Not provided',
         service: formData.service || 'Not specified',
