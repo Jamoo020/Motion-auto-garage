@@ -30,15 +30,16 @@ header {
 }
 
 .logo {
-  height: 70px;
-  width: auto;
+  height: 80px;
+  width: 120px;
   object-fit: contain;
   object-position: left center;
 }
 
 @media (min-width: 900px) {
   .logo {
-    height: 100px;
+    height: 110px;
+    width: 150px;
   }
 }
 
