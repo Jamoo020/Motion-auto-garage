@@ -5,6 +5,19 @@ function Services() {
     <div>
       <div className="body-container">
         <h1>Our Services</h1>
+        <div className="intro-section">
+          <h2>What We Do</h2>
+          <p>We undertake all types of work including:</p>
+          <ul className="service-list intro-list">
+            <li>Mechanical repairs</li>
+            <li>Auto electrical</li>
+            <li>Collision repairs</li>
+            <li>Body building</li>
+            <li>Panel beating</li>
+            <li>Fabrication</li>
+          </ul>
+          <p>For both heavy and light vehicles.</p>
+        </div>
         <h2>Body Works</h2>
         <p>At Motion Auto Garage Ltd, we specialize in comprehensive car body repair and paint services. Our experienced technicians are dedicated to restoring your vehicle to its original condition with precision and care. <br />Explore our range of services designed to meet all your automotive needs:</p>
         <ul className="service-list">
