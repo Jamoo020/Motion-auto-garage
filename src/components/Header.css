@@ -14,16 +14,13 @@ header {
 
 .brand {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex: 1 1 320px;
   min-width: 0;
 }
 
 .brand strong {
-  width: 100%;
-  text-align: center;
   font-size: 1.6rem;
   letter-spacing: 1.2px;
   color: #0b2545;
@@ -33,18 +30,16 @@ header {
 }
 
 .logo {
-  height: 80px;
-  width: 120px;
+  height: 70px;
+  width: auto;
   object-fit: contain;
   object-position: left center;
 }
 
 @media (min-width: 900px) {
   .logo {
-    height: 110px;
-    width: 150px;
-  }
-}
+    height: 100px;
+    width: auto;
 
 nav {
   display: flex;
