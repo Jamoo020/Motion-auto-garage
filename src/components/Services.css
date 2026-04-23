@@ -27,14 +27,19 @@ p {
 
 .service-list li {
   margin-bottom: 20px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  color: #0f172a;
+}
+
+.service-list li p {
+  color: #334155;
 }
 
 .service-list strong {
-  color: #0b2545;
+  color: #0f172a;
   font-size: 18px;
 }
 
