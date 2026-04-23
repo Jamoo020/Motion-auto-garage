@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,10 +21,13 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menu when route changes
-  useEffect(() => {
+  const handleNavClick = (to) => {
     setMenuOpen(false);
-  }, [location]);
+    // Small delay to ensure menu closes before navigation
+    setTimeout(() => {
+      navigate(to);
+    }, 100);
+  };
 
   return (
     <>
@@ -42,11 +46,11 @@ function Header() {
           <span className="menu-icon">{menuOpen ? '✕' : '☰'}</span>
         </button>
         <nav className={menuOpen ? 'open' : ''}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
-          <Link to="/contacts" onClick={() => setMenuOpen(false)}>Contacts</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/" onClick={() => handleNavClick('/')}>Home</Link>
+          <Link to="/services" onClick={() => handleNavClick('/services')}>Services</Link>
+          <Link to="/gallery" onClick={() => handleNavClick('/gallery')}>Gallery</Link>
+          <Link to="/contacts" onClick={() => handleNavClick('/contacts')}>Contacts</Link>
+          <Link to="/about" onClick={() => handleNavClick('/about')}>About</Link>
         </nav>
       </header>
       <div
