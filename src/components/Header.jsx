@@ -20,28 +20,35 @@ function Header() {
   }, []);
 
   return (
-    <header className={scrolled ? 'scrolled' : ''}>
-      <div className="brand">
-        <img src="/images/motion.png" alt="Motion Auto Garage Ltd" className="logo" />
-        <strong>MOTION AUTO GARAGE LTD.</strong>
-      </div>
-      <button
-        type="button"
-        className="menu-toggle"
-        onClick={() => setMenuOpen((prev) => !prev)}
-        aria-expanded={menuOpen}
-        aria-label="Toggle navigation menu"
-      >
-        {menuOpen ? 'Close' : 'Menu'}
-      </button>
-      <nav className={menuOpen ? 'open' : ''}>
-        <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/gallery">Gallery</Link>
-        <Link to="/contacts">Contacts</Link>
-        <Link to="/about">About</Link>
-      </nav>
-    </header>
+    <>
+      <header className={scrolled ? 'scrolled' : ''}>
+        <div className="brand">
+          <img src="/images/motion.png" alt="Motion Auto Garage Ltd" className="logo" />
+          <strong>MOTION AUTO GARAGE LTD.</strong>
+        </div>
+        <button
+          type="button"
+          className="menu-toggle"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? 'Close' : 'Menu'}
+        </button>
+        <nav className={menuOpen ? 'open' : ''}>
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/contacts">Contacts</Link>
+          <Link to="/about">About</Link>
+        </nav>
+      </header>
+      <div
+        className={`drawer-backdrop ${menuOpen ? 'visible' : ''}`}
+        onClick={() => setMenuOpen(false)}
+        aria-hidden={!menuOpen}
+      />
+    </>
   );
 }
 
