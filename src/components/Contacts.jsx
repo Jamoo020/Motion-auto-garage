@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contacts.css';
 
 function Contacts() {
@@ -14,6 +15,7 @@ function Contacts() {
     enableBooking: false
   });
   const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -25,28 +27,47 @@ function Contacts() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = new FormData();
-    data.append('form_type', formData.enableBooking ? 'appointment' : 'contact');
-    data.append('name', formData.name);
-    data.append('email', formData.email);
-    data.append('message', formData.message);
-    if (formData.enableBooking) {
-      data.append('phone', formData.phone);
-      data.append('service', formData.service);
-      data.append('date', formData.date);
-      data.append('time', formData.time);
-      data.append('notes', formData.notes);
-    }
+    setIsSubmitting(true);
+    setMessage('');
 
     try {
-      const response = await fetch('/submit_form.php', {
-        method: 'POST',
-        body: data
+      // EmailJS configuration - you'll need to set these up in EmailJS dashboard
+      const serviceId = 'your_service_id'; // Replace with your EmailJS service ID
+      const templateId = 'your_template_id'; // Replace with your EmailJS template ID
+      const publicKey = 'your_public_key'; // Replace with your EmailJS public key
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'info@automotion.co.ke',
+        form_type: formData.enableBooking ? 'Appointment Request' : 'Contact Message',
+        phone: formData.phone || 'Not provided',
+        service: formData.service || 'Not specified',
+        preferred_date: formData.date || 'Not specified',
+        preferred_time: formData.time || 'Not specified',
+        notes: formData.notes || 'None'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setMessage('Thank you! Your message has been sent successfully. We\'ll get back to you soon.');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+        phone: '',
+        service: '',
+        date: '',
+        time: '',
+        notes: '',
+        enableBooking: false
       });
-      const result = await response.text();
-      setMessage(result);
     } catch (error) {
-      setMessage('Error sending message.');
+      console.error('EmailJS error:', error);
+      setMessage('Sorry, there was an error sending your message. Please try again or contact us directly at info@automotion.co.ke');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -98,10 +119,18 @@ function Contacts() {
           </div>
         )}
 
-        <button type="submit">Send</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
       </form>
 
-      <div id="formMessage" style={{ marginTop: '12px', color: 'var(--muted)' }}>{message}</div>
+      <div id="formMessage" style={{
+        marginTop: '12px',
+        color: message.includes('error') || message.includes('Error') ? '#ff6b6b' : '#4ecdc4',
+        fontWeight: '500'
+      }}>
+        {message}
+      </div>
 
       <div className="contact-info" style={{ marginTop: '18px' }}>
         <p><strong>Call us on:</strong>
