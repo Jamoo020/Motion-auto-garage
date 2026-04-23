@@ -27,6 +27,7 @@ body {
   :root {
     --text: #d4d7e1;
     --text-h: #f8fafc;
+    --muted: #b8c3dd;
     --bg: radial-gradient(circle at top right, rgba(99, 102, 241, 0.26), transparent 26%),
       linear-gradient(180deg, #1f2431 0%, #181c2a 46%, #10141f 100%);
     --border: #2e303a;
