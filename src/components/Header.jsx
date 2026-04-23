@@ -33,7 +33,7 @@ function Header() {
           aria-expanded={menuOpen}
           aria-label="Toggle navigation menu"
         >
-          {menuOpen ? 'Close' : 'Menu'}
+          <span className="menu-icon">{menuOpen ? '✕' : '☰'}</span>
         </button>
         <nav className={menuOpen ? 'open' : ''}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
