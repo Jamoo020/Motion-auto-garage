@@ -65,7 +65,7 @@ to_email: 'info@motion-auto.co.ke',
       });
     } catch (error) {
       console.error('EmailJS error:', error);
-      setMessage('Sorry, there was an error sending your message. Please try again or contact us directly at info@automotion.co.ke');
+setMessage('Sorry, there was an error sending your message. Please try again or contact us directly at info@motion-auto.co.ke');
     } finally {
       setIsSubmitting(false);
     }
@@ -74,7 +74,14 @@ to_email: 'info@motion-auto.co.ke',
   return (
     <div className="container">
       <h1>Contact Us</h1>
-      <p>We'd love to hear from you. Use the form below to send a message or tick the booking option to request an appointment.</p>
+      <p>We'd love to hear from you. Use the details below or send a message in the form.</p>
+
+      <div className="contact-info contact-summary">
+        <p><strong>Call us on:</strong> <a href="tel:+254722369689">+2547 22 369689</a> or <a href="tel:+254793853771">+2547 93 853 771</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/254722369689" target="_blank" rel="noreferrer">+2547 22 369689</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/motion_auto_garage" target="_blank" rel="noreferrer">@motion_auto_garage</a></p>
+        <p><strong>Email us at:</strong> <a href="mailto:info@motion-auto.co.ke">info@motion-auto.co.ke</a></p>
+      </div>
 
       <form onSubmit={handleSubmit} className="contact-form">
         <label htmlFor="name">Full Name</label>
