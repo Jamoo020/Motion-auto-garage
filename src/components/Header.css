@@ -32,6 +32,8 @@ header {
 .logo {
   height: 70px;
   width: auto;
+  object-fit: contain;
+  object-position: left center;
 }
 
 @media (min-width: 900px) {
