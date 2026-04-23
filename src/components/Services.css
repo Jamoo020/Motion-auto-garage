@@ -16,7 +16,7 @@ h2 {
 }
 
 p {
-  color: var(--text);
+  color: var(--card-text);
   margin: 0 0 16px;
 }
 

@@ -120,7 +120,7 @@
 }
 
 .feature-item p {
-  color: var(--muted);
+  color: var(--card-text);
   line-height: 1.6;
   margin: 0;
   font-size: 1rem;
@@ -156,7 +156,7 @@
 
 .tip-item h3 {
   font-size: 1.3rem;
-  color: #333;
+  color: var(--card-text);
   margin: 0 0 12px;
   font-weight: 600;
   display: flex;
@@ -165,7 +165,7 @@
 }
 
 .tip-item p {
-  color: var(--muted);
+  color: var(--card-text);
   line-height: 1.6;
   margin: 0;
   font-size: 0.95rem;
@@ -211,13 +211,13 @@
 
 .part-highlight h3 {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--card-text);
   margin: 0 0 8px;
   font-weight: 600;
 }
 
 .part-highlight p {
-  color: var(--muted);
+  color: var(--card-text);
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.4;

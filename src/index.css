@@ -3,6 +3,7 @@
   --muted: #334155;
   --text: #111;
   --text-h: #111;
+  --card-text: #1f2937;
   --bg: radial-gradient(circle at top left, rgba(60, 156, 255, 0.28), transparent 20%),
     linear-gradient(180deg, #ffffff 0%, #e7f5ff 36%, #d9edff 72%, #f2fbff 100%);
   --card: #ffffff;
@@ -28,6 +29,7 @@ body {
     --text: #d4d7e1;
     --text-h: #f8fafc;
     --muted: #b8c3dd;
+    --card-text: #1f2937;
     --bg: radial-gradient(circle at top right, rgba(99, 102, 241, 0.26), transparent 26%),
       linear-gradient(180deg, #1f2431 0%, #181c2a 46%, #10141f 100%);
     --border: #2e303a;
