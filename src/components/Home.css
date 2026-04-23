@@ -45,7 +45,7 @@
 .hero-subtitle {
   font-size: 2rem;
   margin: 0 0 20px;
-  color: #333;
+  color: var(--text-h);
   font-weight: 500;
   position: relative;
   z-index: 1;
@@ -114,7 +114,7 @@
 
 .feature-item h3 {
   font-size: 1.4rem;
-  color: #333;
+  color: var(--text-h);
   margin: 0 0 15px;
   font-weight: 600;
 }
