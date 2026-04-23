@@ -136,17 +136,16 @@ header.scrolled .brand strong {
     position: relative;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: none;
-    grid-template-columns: min-content 1fr min-content;
   }
 
-  .logo {
-    height: 52px;
+  .brand {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 
-  .brand-text {
+  .brand strong {
     font-size: 0.95rem;
-    letter-spacing: 1.4px;
-    padding: 0 10px;
   }
 
   nav {
