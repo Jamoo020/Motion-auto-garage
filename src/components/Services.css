@@ -16,7 +16,7 @@ h2 {
 }
 
 p {
-  color: var(--muted);
+  color: var(--text);
   margin: 0 0 16px;
 }
 
