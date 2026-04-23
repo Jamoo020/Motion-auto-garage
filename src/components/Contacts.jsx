@@ -109,7 +109,7 @@ function Contacts() {
           <a href="tel:+254793853771">+2547 93 853 771</a>
         </p>
         <p><strong>Email us at:</strong>
-          <a href="mailto:info@motionauto.co.ke">info@motionauto.co.ke</a>
+          <a href="mailto:info@automotion.co.ke">info@automotion.co.ke</a>
         </p>
       </div>
     </div>
