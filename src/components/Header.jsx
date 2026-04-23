@@ -32,10 +32,8 @@ function Header() {
   return (
     <>
       <header className={scrolled ? 'scrolled' : ''}>
-        <div className="brand-area">
-          <img src="/images/motion.png" alt="Motion Auto Garage Ltd" className="logo" />
-          <strong className="brand-text">MOTION AUTO GARAGE LTD.</strong>
-        </div>
+        <img src="/images/motion.png" alt="Motion Auto Garage Ltd" className="logo" />
+        <strong className="brand-text">MOTION AUTO GARAGE LTD.</strong>
         <button
           type="button"
           className="menu-toggle"
