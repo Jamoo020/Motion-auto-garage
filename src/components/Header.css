@@ -131,22 +131,24 @@ header.scrolled .brand strong {
 
   nav {
     position: fixed;
-    inset: 0 auto 0 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
     width: min(280px, 80vw);
-    max-width: 280px;
     background: rgba(15, 23, 42, 0.98);
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     padding: 80px 18px 24px;
     gap: 14px;
-    transform: translateX(-110%);
+    transform: translateX(-100%);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.25s ease, opacity 0.25s ease;
     box-shadow: 18px 0 48px rgba(0, 0, 0, 0.25);
     border-right: 1px solid rgba(255, 255, 255, 0.08);
-    z-index: 19;
+    z-index: 21;
   }
 
   nav.open {
@@ -156,7 +158,7 @@ header.scrolled .brand strong {
   }
 
   nav a {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     margin: 0;
     padding: 14px 16px;
     text-align: left;
@@ -176,9 +178,18 @@ header.scrolled .brand strong {
     justify-content: center;
   }
 
-  header.scrolled nav {
-    transform: translateX(-110%);
+  .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.55);
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 20;
+  }
+
+  .drawer-backdrop.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

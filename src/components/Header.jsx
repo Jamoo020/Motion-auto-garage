@@ -36,11 +36,11 @@ function Header() {
           {menuOpen ? 'Close' : 'Menu'}
         </button>
         <nav className={menuOpen ? 'open' : ''}>
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/contacts">Contacts</Link>
-          <Link to="/about">About</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+          <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
+          <Link to="/contacts" onClick={() => setMenuOpen(false)}>Contacts</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
         </nav>
       </header>
       <div
