@@ -1,7 +1,7 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 18px 32px;
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
@@ -10,14 +10,18 @@ header {
   z-index: 20;
   box-shadow: 0 14px 38px rgba(15, 23, 42, 0.12);
   flex-wrap: wrap;
+  position: relative;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
-  flex: 1 1 280px;
+  flex: 0 1 auto;
   min-width: 0;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .brand strong {
@@ -42,6 +46,10 @@ header {
 }
 
 nav {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
