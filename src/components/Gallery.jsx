@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Gallery.css';
 
 function Gallery() {
   const [loadedImages, setLoadedImages] = useState(new Set());
+  const [selectedImage, setSelectedImage] = useState(null);
+  const gridRef = useRef(null);
 
   const images = [
     '962i.png', '962ii.png', '962iii.png', '855i.png', '855ii.png',
@@ -16,11 +18,43 @@ function Gallery() {
     setLoadedImages(prev => new Set([...prev, index]));
   };
 
+  const openLightbox = (index) => {
+    setSelectedImage(index);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const showPrevImage = (event) => {
+    event.stopPropagation();
+    setSelectedImage((current) => (current === 0 ? images.length - 1 : current - 1));
+  };
+
+  const showNextImage = (event) => {
+    event.stopPropagation();
+    setSelectedImage((current) => (current === images.length - 1 ? 0 : current + 1));
+  };
+
+  const scrollGallery = (direction) => {
+    if (!gridRef.current) return;
+    const scrollAmount = gridRef.current.clientWidth * 0.8;
+    gridRef.current.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  };
+
   return (
     <div className="container">
-      <h1>Gallery</h1>
-      <p>Some of our latest work:</p>
-      <div className="grid">
+      <div className="gallery-header">
+        <div>
+          <h1>Gallery</h1>
+          <p>Some of our latest work:</p>
+        </div>
+        <div className="gallery-actions">
+          <button type="button" onClick={() => scrollGallery(-1)} className="scroll-btn" aria-label="Scroll gallery left">‹</button>
+          <button type="button" onClick={() => scrollGallery(1)} className="scroll-btn" aria-label="Scroll gallery right">›</button>
+        </div>
+      </div>
+      <div className="grid" ref={gridRef}>
         {images.map((img, index) => (
           <div key={index} className="image-container">
             {!loadedImages.has(index) && <div className="image-placeholder"></div>}
@@ -29,7 +63,8 @@ function Gallery() {
               alt={`Job ${index + 1}`}
               loading="lazy"
               onLoad={() => handleImageLoad(index)}
-              style={{ opacity: loadedImages.has(index) ? 1 : 0 }}
+              onClick={() => openLightbox(index)}
+              style={{ opacity: loadedImages.has(index) ? 1 : 0, cursor: 'pointer' }}
             />
           </div>
         ))}
@@ -38,7 +73,20 @@ function Gallery() {
           Your browser does not support the video tag.
         </video>
       </div>
-    </div>
+      {selectedImage !== null && (
+        <div className="lightbox-overlay" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(event) => event.stopPropagation()}>
+            <button type="button" className="lightbox-close" onClick={closeLightbox} aria-label="Close image viewer">×</button>
+            <button type="button" className="lightbox-nav prev" onClick={showPrevImage} aria-label="Previous image">‹</button>
+            <img
+              src={`/images/gallery/${images[selectedImage]}`}
+              alt={`Job ${selectedImage + 1}`}
+              className="lightbox-image"
+            />
+            <button type="button" className="lightbox-nav next" onClick={showNextImage} aria-label="Next image">›</button>
+          </div>
+        </div>
+      )}    </div>
   );
 }
 
