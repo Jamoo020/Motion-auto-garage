@@ -21,18 +21,18 @@ function Services() {
         <h2>Body Works</h2>
         <p>At Motion Auto Garage Ltd, we specialize in comprehensive car body repair and paint services. Our experienced technicians are dedicated to restoring your vehicle to its original condition with precision and care. <br />Explore our range of services designed to meet all your automotive needs:</p>
         <ul className="service-list">
-          <li id="job6">
+          <li id="service-job6">
             <strong>Collision & Accident Repairs</strong>
-            <p>We offer complete <a className="link" href="#job6">accident and collision repair services</a> using advanced diagnostic and repair tools to restore your vehicle's structural integrity, safety, and factory finish.</p>
+            <p>We offer complete <a className="link" href="#service-job6">accident and collision repair services</a> using advanced diagnostic and repair tools to restore your vehicle's structural integrity, safety, and factory finish.</p>
           </li>
-          <li id="job19">
+          <li id="service-job19">
             <strong>Dent Removal & Panel Beating</strong>
-            <p>Our skilled technicians specialize in dent removal and precision <a className="link" href="#job19">panel beating</a>, ensuring your car's bodywork is perfectly reshaped and looks as good as new.</p>
+            <p>Our skilled technicians specialize in dent removal and precision <a className="link" href="#service-job19">panel beating</a>, ensuring your car's bodywork is perfectly reshaped and looks as good as new.</p>
           </li>
-          <li id="video1">
+          <li id="service-video1">
             <strong>Car Respray & Paint Restoration</strong>
             <p>We provide full and partial vehicle resprays using high-quality paint and modern color-matching technology, leaving your car with a flawless, durable finish.
-            <br /> <a className="link" href="#video1">Watch how we perform our precision body spray process</a> from start to finish.</p>
+            <br /> <a className="link" href="#service-video1">Watch how we perform our precision body spray process</a> from start to finish.</p>
           </li>
           <li>
             <strong>Scratch Repair & Detailing</strong>
