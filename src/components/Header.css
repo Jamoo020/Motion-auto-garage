@@ -3,12 +3,12 @@ header {
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
   padding: 18px 24px;
-  background: #e0f2fe;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   position: sticky;
   top: 0;
   z-index: 20;
-  box-shadow: 0 14px 38px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.12);
   gap: 14px;
   width: 100%;
   max-width: 100%;
@@ -103,8 +103,8 @@ nav a.active {
 
 header.scrolled {
   padding: 12px 24px;
-  background: #e0f2fe;
-  box-shadow: 0 10px 22px rgba(59, 130, 246, 0.15);
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
 }
 
 header.scrolled .logo {
@@ -135,7 +135,7 @@ header.scrolled .brand strong {
     padding: 14px 18px;
     gap: 10px;
     position: relative;
-    background: #e0f2fe;
+    background: #ffffff;
     backdrop-filter: none;
   }
 
