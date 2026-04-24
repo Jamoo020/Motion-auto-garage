@@ -9,12 +9,12 @@
   text-align: center;
   margin-bottom: 48px;
   padding: 40px 36px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(15, 23, 42, 0.03));
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(37, 99, 235, 0.16));
+  border: 1px solid rgba(59, 130, 246, 0.18);
   border-radius: 24px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
 }
 
 .hero-section::before {
@@ -24,14 +24,14 @@
   left: -50%;
   width: 230%;
   height: 230%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
-  opacity: 0.45;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.24) 0%, transparent 70%);
+  opacity: 0.55;
 }
 
 .hero-title {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   margin: 0 0 12px;
-  color: #111827;
+  color: #ffffff;
   font-weight: 800;
   position: relative;
   z-index: 1;
@@ -41,7 +41,7 @@
 .hero-subtitle {
   font-size: clamp(1.6rem, 3vw, 2rem);
   margin: 0 0 20px;
-  color: #1f2937;
+  color: rgba(255, 255, 255, 0.92);
   font-weight: 600;
   position: relative;
   z-index: 1;
@@ -49,7 +49,7 @@
 
 .hero-description {
   font-size: 1.05rem;
-  color: #334155;
+  color: rgba(255, 255, 255, 0.88);
   max-width: 660px;
   margin: 0 auto;
   line-height: 1.8;
