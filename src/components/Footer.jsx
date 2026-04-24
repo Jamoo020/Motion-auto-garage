@@ -20,10 +20,10 @@ function Footer() {
         <div className="footer-column">
           <h3>Content</h3>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contacts">Contacts</Link></li>
+            <li><Link to="/about#company-overview">About us</Link></li>
+            <li><Link to="/about#company-values">Company Values</Link></li>
+            <li><Link to="/about#location">Location</Link></li>
+            <li><Link to="/contacts#appointment">Book appointment</Link></li>
           </ul>
         </div>
 
@@ -32,8 +32,8 @@ function Footer() {
           <ul>
             <li><a href="tel:+254712345678">Call us</a></li>
             <li><a href="mailto:info@motionautogarage.co.ke">Email</a></li>
-            <li><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
-            <li><a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
+            <li><a href="https://wa.me/254793853771" target="_blank" rel="noreferrer">Whatsapp</a></li>
+            <li><a href="https://www.instagram.com/motionautogarage" target="_blank" rel="noreferrer">Instagram</a></li>
           </ul>
         </div>
       </div>
