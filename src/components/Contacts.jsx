@@ -141,7 +141,7 @@ setMessage('Sorry, there was an error sending your message. Please try again or 
 
       <div className="social-links">
         <a href="https://www.instagram.com/motionautogarage?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" title="Instagram">📷</a>
-        <a href="https://wa.me/254722369689" target="_blank" rel="noreferrer" title="WhatsApp">💬</a>
+        <a href="https://wa.me/254793853771" target="_blank" rel="noreferrer" title="WhatsApp">💬</a>
       </div>
 
       <div className="contact-info" style={{ marginTop: '18px' }}>
