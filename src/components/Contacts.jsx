@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './Contacts.css';
 
@@ -16,6 +17,16 @@ function Contacts() {
   });
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -76,7 +87,7 @@ setMessage('Sorry, there was an error sending your message. Please try again or 
       <h1>Contact Us</h1>
       <p>We'd love to hear from you. Use the details below or send a message in the form.</p>
 
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form id="appointment" onSubmit={handleSubmit} className="contact-form">
         <label htmlFor="name">Full Name</label>
         <input type="text" id="name" name="name" required placeholder="Your name" value={formData.name} onChange={handleChange} />
 

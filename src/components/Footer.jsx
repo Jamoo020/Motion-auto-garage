@@ -10,10 +10,10 @@ function Footer() {
         <div className="footer-column">
           <h3>About</h3>
           <ul>
-            <li><Link to="/about">About us</Link></li>
-            <li><Link to="/about">Team</Link></li>
-            <li><Link to="/about">Staff</Link></li>
-            <li><Link to="/contacts">Book appointment</Link></li>
+            <li><Link to="/about#company-overview">About us</Link></li>
+            <li><Link to="/about#company-values">Company Values</Link></li>
+            <li><Link to="/about#location">Location</Link></li>
+            <li><Link to="/contacts#appointment">Book appointment</Link></li>
           </ul>
         </div>
 

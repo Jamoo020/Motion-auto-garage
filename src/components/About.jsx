@@ -1,9 +1,22 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './About.css';
 
 function About() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
-      <section className="container">
+      <section className="container" id="company-overview">
         <h1>COMPANY OVERVIEW</h1>
         <h2>About Us</h2>
         <p>Motion Auto Garage Limited is an innovation of a group of loyal, smart, timeless, accurate, energetic and highly trained men and women in the service provision coming together to form a company with new ideas and high-tech methods to assist businesses, individuals and companies increase growth potential through quality service.</p>
@@ -24,7 +37,7 @@ function About() {
         <p>Since our clients are the focus of our growth, we emphasize excellent working relations to realize our goals. Hiring experts with rich knowledge in the automotive industry makes Motion Auto Garage Limited the best automotive service provider for your business needs.</p>
       </section>
 
-      <section className="container">
+      <section className="container" id="company-values">
         <h2>COMPANY VALUES</h2>
         <p>Our main aim is to provide the best high-tech methods in operations through automotive engineering science to maximize efficiency, time, and resources.</p>
         <p>We have developed strategies to minimize service delivery time and improve finished products and services.</p>
@@ -68,7 +81,7 @@ function About() {
         <p>Our passion for automobiles ensures customer satisfaction and value for money.</p>
       </section>
 
-      <div className="container">
+      <div className="container" id="location">
         <h2>Location</h2>
         <p>We are located along Mwingo Road, opposite Fair Reits Academy, in Port Reitz, Changamwe, Kenya.<br /> Our central location makes it easy for customers from all over the city to access our top-notch automotive services.</p>
       </div>
