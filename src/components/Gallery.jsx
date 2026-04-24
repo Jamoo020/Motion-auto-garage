@@ -1,10 +1,9 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import './Gallery.css';
 
 function Gallery() {
   const [loadedImages, setLoadedImages] = useState(new Set());
   const [selectedImage, setSelectedImage] = useState(null);
-  const gridRef = useRef(null);
 
   const images = [
     '962i.png', '962ii.png', '962iii.png', '855i.png', '855ii.png',
@@ -36,12 +35,6 @@ function Gallery() {
     setSelectedImage((current) => (current === images.length - 1 ? 0 : current + 1));
   };
 
-  const scrollGallery = (direction) => {
-    if (!gridRef.current) return;
-    const scrollAmount = gridRef.current.clientWidth * 0.8;
-    gridRef.current.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  };
-
   return (
     <div className="container">
       <div className="gallery-header">
@@ -49,12 +42,8 @@ function Gallery() {
           <h1>Gallery</h1>
           <p>Some of our latest work:</p>
         </div>
-        <div className="gallery-actions">
-          <button type="button" onClick={() => scrollGallery(-1)} className="scroll-btn" aria-label="Scroll gallery left">‹</button>
-          <button type="button" onClick={() => scrollGallery(1)} className="scroll-btn" aria-label="Scroll gallery right">›</button>
-        </div>
       </div>
-      <div className="grid" ref={gridRef}>
+      <div className="grid">
         {images.map((img, index) => (
           <div key={index} className="image-container">
             {!loadedImages.has(index) && <div className="image-placeholder"></div>}

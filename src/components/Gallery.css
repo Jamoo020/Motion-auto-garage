@@ -16,33 +16,7 @@ p {
 }
 
 .gallery-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
   margin-bottom: 16px;
-}
-
-.gallery-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.scroll-btn {
-  border: 1px solid rgba(15, 23, 42, 0.16);
-  background: #ffffff;
-  color: #0f172a;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.scroll-btn:hover {
-  background: rgba(59, 130, 246, 0.08);
-  transform: translateY(-1px);
 }
 
 .grid {
