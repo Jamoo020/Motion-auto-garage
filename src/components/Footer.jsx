@@ -30,7 +30,7 @@ function Footer() {
         <div className="footer-column">
           <h3>Connect</h3>
           <ul>
-            <li><a href="tel:+254712345678">Call us</a></li>
+            <li><a href="tel:+254793853771">Call us</a></li>
             <li><a href="mailto:info@motion-auto.co.ke">Email</a></li>
             <li><a href="https://wa.me/254793853771" target="_blank" rel="noreferrer">Whatsapp</a></li>
             <li><a href="https://www.instagram.com/motionautogarage" target="_blank" rel="noreferrer">Instagram</a></li>
