@@ -76,13 +76,6 @@ setMessage('Sorry, there was an error sending your message. Please try again or 
       <h1>Contact Us</h1>
       <p>We'd love to hear from you. Use the details below or send a message in the form.</p>
 
-      <div className="contact-info contact-summary">
-        <p><strong>Call us on:</strong> <a href="tel:+254722369689">+2547 22 369689</a> or <a href="tel:+254793853771">+2547 93 853 771</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/254722369689" target="_blank" rel="noreferrer">+2547 22 369689</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/motion_auto_garage" target="_blank" rel="noreferrer">@motion_auto_garage</a></p>
-        <p><strong>Email us at:</strong> <a href="mailto:info@motion-auto.co.ke">info@motion-auto.co.ke</a></p>
-      </div>
-
       <form onSubmit={handleSubmit} className="contact-form">
         <label htmlFor="name">Full Name</label>
         <input type="text" id="name" name="name" required placeholder="Your name" value={formData.name} onChange={handleChange} />
@@ -150,7 +143,7 @@ setMessage('Sorry, there was an error sending your message. Please try again or 
           <a href="tel:+254793853771">+2547 93 853 771</a>
         </p>
         <p><strong>Email us at:</strong>
-          <a href="mailto:info@automotion.co.ke">info@automotion.co.ke</a>
+          <a href="mailto:info@motion-auto.co.ke">info@motion-auto.co.ke</a>
         </p>
       </div>
     </div>

@@ -56,21 +56,7 @@ p {
   margin-top: 20px;
 }
 
-.contact-summary {
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.03);
-  margin-bottom: 24px;
-}
-
-.contact-summary p {
-  margin: 10px 0;
-  line-height: 1.7;
-}
-
-.contact-info a,
-.contact-summary a {
+.contact-info a {
   color: var(--accent);
   text-decoration: none;
 }
