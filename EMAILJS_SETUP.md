@@ -2,7 +2,7 @@
 
 ## Setting up Email Sending for the Contact Form
 
-The contact form now uses EmailJS to send emails directly to `info@automotion.co.ke` without needing a PHP backend.
+The contact form now uses EmailJS to send emails directly to `info@motion-auto.co.ke` without needing a PHP backend.
 
 ### Steps to Set Up EmailJS:
 
@@ -51,7 +51,7 @@ The contact form now uses EmailJS to send emails directly to `info@automotion.co
      ```
 
 6. **Test the Form:**
-   - The form will now send emails directly to `info@automotion.co.ke`
+   - The form will now send emails directly to `info@motion-auto.co.ke`
    - Test with the contact form on your website
 
 ### Benefits:
